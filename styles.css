@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('IMG/Hintergrund.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #005f73;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 60px; 
+}
+
+.form-box, .add-holiday-box, .holiday-item, .welcome-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.form-box h1, .form-box h2, .welcome-box h1, .add-holiday-box h2, .holiday-item p {
+    color: #005f73;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="date"], button {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #023e8a;
+}
+
+footer {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .form-box, .welcome-box, .add-holiday-box, .holiday-item {
+        width: 90%;
+        padding: 10px;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    footer {
+        padding: 0.5rem 0;
+    }
+}
